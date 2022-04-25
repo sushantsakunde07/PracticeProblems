@@ -1,4 +1,4 @@
-//Write a program to reverse the integer number ex. Input N = 231 reverse 132
+//Write a Program to print the month name for the given number
 package com.bridgelabz;
 
 import java.util.Scanner;
@@ -6,27 +6,50 @@ import java.util.Scanner;
 public class PracticeProblem {
 
     public static void main(String[] args) {
-        char ch;
-        //Scanner class takes input from the user
         Scanner sc = new Scanner(System.in);
-        //get input and it is stored ch variable
-        System.out.println("Enter any Alphabet: ");
-        ch = sc.next().charAt(0);
-        switch (ch) {
-            case 'a':
-            case 'e':
-            case 'i':
-            case 'o':
-            case 'u':
-            case 'A':
-            case 'E':
-            case 'I':
-            case 'O':
-            case 'U':
-                System.out.println(ch + " is vowel");
+        System.out.println("Enter Month Number: ");
+        int monthNumber;
+        monthNumber = sc.nextInt();
+        switch (monthNumber) {
+            case 1:
+                System.out.println("January");
+                break;
+            case 2:
+                System.out.println("February");
+                break;
+            case 3:
+                System.out.println("March");
+                break;
+            case 4:
+                System.out.println("April");
+                break;
+            case 5:
+                System.out.println("May");
+                break;
+            case 6:
+                System.out.println("June");
+                break;
+            case 7:
+                System.out.println("July");
+                break;
+            case 8:
+                System.out.println("August");
+                break;
+            case 9:
+                System.out.println("September");
+                break;
+            case 10:
+                System.out.println("October");
+                break;
+            case 11:
+                System.out.println("November");
+                break;
+            case 12:
+                System.out.println("December");
                 break;
             default:
-                System.out.println(ch + " is consonant");
+                System.out.println("Invalid month!");
+                break;
         }
     }
 }
