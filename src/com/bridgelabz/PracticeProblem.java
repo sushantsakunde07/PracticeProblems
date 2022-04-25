@@ -1,4 +1,4 @@
-//Write a program for the sum of n natural number ex. Input N = 5 output 1+2+3+4+5
+//Write a program to reverse the integer number ex. Input N = 231 reverse 132
 package com.bridgelabz;
 
 import java.util.Scanner;
@@ -6,22 +6,20 @@ import java.util.Scanner;
 public class PracticeProblem {
 
     public static void main(String[] args) {
+        System.out.println("Enter the number:");
         //Creating Scanner class for taking input from the user
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Number:");
         int number = sc.nextInt();
-        int i = 1;
-        int sum = 0;
+        int reverse = 0;
 
-        //while loop will execute the condition until it returns true value
-        while (i <= number) {
-            //adding value of i into the sum variable
-            sum = sum + i;
-            //incrementing value of i by 1
-            i++;
+        //it will run the loop until number becomes 0
+        while (number != 0) {
+            //it will get the last digit from number
+            int remainder = number % 10;
+            reverse = reverse * 10 + remainder;
+            number = number/10;
         }
-        //Displaying sum of n natural numbers
-        System.out.println("Sum of n Natural Numbers is: " + sum);
+        System.out.println("The reverse of the given number is: " +reverse);
     }
 }
 
