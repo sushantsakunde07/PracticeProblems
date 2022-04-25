@@ -6,22 +6,23 @@ import java.util.Scanner;
 public class PracticeProblem {
 
     public static void main(String[] args) {
-        System.out.println("Enter the number:");
-        //Creating Scanner class for taking input from the user
-        Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
-        int reverse = 0;
+            int number, temp, sum, remainder;
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter any number: ");
+            number = sc.nextInt();
+            temp = number;
 
-        //it will run the loop until number becomes 0
-        while (number != 0) {
-            //it will get the last digit from number
-            int remainder = number % 10;
-            reverse = reverse * 10 + remainder;
-            number = number/10;
+            for (sum = 0; number != 0; number/=10) {
+                remainder = number % 10;
+                sum = (sum * 10)+ remainder;
+            }
+            //palindrome if number and sum are equal
+            if (sum == temp) {
+                System.out.println(temp+ " is a palindrome");
+            } else {
+                System.out.println(temp+" is not a palindrome");
+            }
         }
-        System.out.println("The reverse of the given number is: " +reverse);
     }
-}
-
 
 
