@@ -33,9 +33,7 @@ public class PracticeProblem {
             System.out.println("NINE");
         } else
             System.out.println("Enter a single digit");
-
     }
-
 }
 
 
